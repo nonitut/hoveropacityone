@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{
+    font-family: 'CarlaSansLight';
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Задайте желаемую ширину и высоту контейнера */
+    height: 200px; /* Задайте желаемую ширину и высоту контейнера */
+    overflow: hidden;
+}
+
+.image1,
+.image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease; /* Добавим плавный переход при изменении прозрачности */
+}
+
+.image2 {
+    opacity: 0; /* Скрыть вторую картинку изначально */
+}
+
+.image-container:hover .image1 {
+    opacity: 0; /* При наведении на контейнер, первая картинка становится прозрачной */
+}
+
+.image-container:hover .image2 {
+    opacity: 1; /* При наведении на контейнер, вторая картинка становится видимой */
+}
